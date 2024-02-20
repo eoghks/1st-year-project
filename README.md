@@ -6,6 +6,6 @@
     - v2: JPA 사용
     - v3: JPA의 QueryDsl사용
 
-# 자세한 내용은 각 프로젝트의 ReadMe 파일 참조
+# 자세한 내용은 각 프로젝트의 READMe 파일 참조
    
     
