@@ -1,7 +1,7 @@
 # 환경
-JAVA8 이상
-Apach Tomacat Version 8.5
-PostgesSQL Version 10
+* JAVA8 이상
+* Apach Tomacat Version 8.5
+* PostgesSQL Version 10
 
 # 목적
 AWS 인스턴스를 추가, 삭제, 수정 할 수 있는 프로그램
