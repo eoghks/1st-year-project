@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<typeAliases>
+		<typeAlias type="vo.CloudVO" alias="cloudVO"></typeAlias>
+		<typeAlias type="vo.PropertyVO" alias="propertyVO"></typeAlias>
+		<typeAlias type="vo.NamespaceVO" alias="namespaceVO"></typeAlias>
+		<typeAlias type="dto.HostDTO" alias="hostDTO"></typeAlias>
+		<typeAlias type="dto.HostsDTO" alias="hostsDTO"></typeAlias>
+		<typeAlias type="dto.SearchDTO" alias="searchDTO"></typeAlias>
+		<typeAlias type="dto.PropertyDTO" alias="propertyDTO"></typeAlias>
+	</typeAliases>
+</configuration>

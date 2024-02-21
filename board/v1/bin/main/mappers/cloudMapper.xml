@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="mapper.cloudMapper">
+	<!--**********************insert***************************-->
+	<insert id="insertAccount" parameterType="propertyDTO">
+		insert into cloud_account_key values (#{host_name} , ${scan_type} , #{scan_key} , #{access_key_id} , #{region} , ${scan_interval} )
+	</insert>
+	
+	<insert id="insertNamespace" parameterType="propertyDTO">
+		insert into cloud_namespace values 
+		<foreach collection="namespaces" item="namespace" separator=",">
+			(#{host_name}, #{namespace})
+		</foreach>
+	</insert>
+	
+	<!--**********************update***************************-->
+	<update id="updateAccountCloud" parameterType="propertyDTO">
+		update cloud_account_key set host_name=#{host_name},
+						scan_type=${scan_type},
+						scan_key=#{scan_key},
+						access_key_id= #{access_key_id},
+						region=#{region},
+						scan_interval=${scan_interval} 
+			where host_name=#{host_name}
+	</update>
+	
+	<!--**********************delete***************************-->
+	<delete id ="delete" parameterType="hostsDTO">
+		<if test="host_names.size > 0">
+			delete from ${table} where host_name in
+			<foreach collection="host_names" item="host_name" separator="," open="(" close=")">
+				#{host_name}
+			</foreach>
+		</if>
+	</delete>
+
+	
+	<!--**********************select(join x)***************************-->	
+	<select id="selectPropertyAccountCloud" resultType="propertyVO" parameterType="hostDTO">
+		select * from cloud_account_key where host_name=#{host_name}
+	</select>
+	
+	<select id="selectPropertyNamespaceCloudList" resultType="namespaceVO" parameterType="hostDTO">
+		select namespace from cloud_namespace where host_name=#{host_name}
+	</select>
+	
+	<!--**********************select(join o)***************************-->	
+	<select id="selectCloudList" resultType="cloudVO" parameterType="searchDTO">
+		select c.host_name, c.scan_type, c.scan_key, c.access_key_id, c.region, c.namespaces 
+			from(
+				select a.host_name, a.scan_type , a.scan_key , a.access_key_id , a.region , case when b.namespaces is null then 0 else b.namespaces end
+					from (
+						select host_name ,  scan_type , scan_key ,access_key_id, region
+							from cloud_account_key ) as a left outer join
+						(select host_name, count(*) as namespaces 
+							from cloud_namespace 
+							group by host_name ) b
+						on a.host_name =b.host_name
+			)c
+		where 1=1
+		<if test="type != null">
+			<choose>
+				<when test='type.equals("scan_type") or type.equals("namespaces")'>
+					and c.${type} = ${name}
+				</when>
+				<otherwise>
+					and c.${type} like '%${name}%'
+				</otherwise>
+			</choose>
+		</if>
+		ORDER BY host_name
+	</select>
+	
+</mapper>
