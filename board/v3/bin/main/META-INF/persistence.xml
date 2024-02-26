@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+   	<persistence-unit name="simple-jpa">
+
+       		<class>entity.AccessKey</class>
+       		
+       		<class>entity.Namespace</class>
+
+       		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+	<properties>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL10Dialect"/>
+
+            <property name="hibernate.show_sql" value="true"/>
+
+            <property name="hibernate.c3p0.min_size" value="5"/>
+
+            <property name="hibernate.c3p0.max_size" value="20"/>
+
+            <property name="hibernate.c3p0.timeout" value="500"/>
+
+            <property name="hibernate.c3p0.idle_test_period" value="2000"/>
+            
+            <property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+            
+        </properties>   
+
+   </persistence-unit>
+
+</persistence>
