@@ -1,0 +1,57 @@
+@charset "UTF-8";
+table {
+	width: 100%;
+}
+body {
+	background-color:#EFFBF5;
+}
+a{
+	text-decoration-line: none;
+	color: blue;
+}
+td {
+	text-align: center;
+}
+button{
+	width:100px;
+	height:30px;
+	background-color:#CEF6F5;
+	border-color: #E0F8F1;
+}
+.b1{
+	position:relative;
+	left:20px;
+}
+.b2{
+	text-align: center;
+	background-color:#EFFBF5;
+	border: 0;
+	color: blue;
+}
+select{
+	position:relative;
+}
+.container{
+	background-color:#EFFBF5; 
+	height:30px;
+	display: flex;
+	justify-content: space-between;
+}
+input{
+	position:relative;
+	
+}
+.i1{
+	height:25px;
+}
+
+.s1{
+	width:200px;
+	height:30px;
+}
+.d1{
+	padding:20px;
+}
+.hidden{
+	display:none;
+}
