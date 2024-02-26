@@ -1,7 +1,7 @@
 # 개요
 * JPA를 이용한 게시판 프로젝트(default: JPA의 QueryDsl를 이용)
-* service pakage의 CloudService는 JPA의 Query Method를 이용(주석 처리되어 있음)
-* service pakage의 CloudService2는 JPA의 CriteriaQuery를 이용(주석 처리되어 있음)
+* service pakage의 CloudService는 JPA의 Query Method를 이용(controller에서 주석 처리되어 있음)
+* service pakage의 CloudService2는 JPA의 CriteriaQuery를 이용(controller에서 주석 처리되어 있음)
 * service pakage의 CloudService3는 JPA의 QueryDsl을 이용
 
 # 환경
@@ -35,3 +35,8 @@ localhost:{port}/test
  2. 팝업창이 열리면, Java Build Path > Source 탭에 들어간 후 Add Folder를 클릭한다.
  3. Source Folter를 선택하는 창에서 아까 build를 해서 생성한 Q class가 있는 폴더를 선택한다. src/main/generated/queryDsl에 설정되어 있다. 만약 다른 경로를 설정했다면 설정된 경로로 설정해야 한다.
  4. buildPath 설정을 모두 마치면 아래와 깉으 프로젝트에 Q Class가 있는 'src/main/generated/queryDsl' 폴더가 import된 것을 볼 수 있다.
+
+* QueryDsl 대신 CriteriaQuery 이나 Query Method를 이용하여 사용는 방법
+1. Query Method controller에서 service으로 시작하는 method 주석 해제 및 service2, service3으로 method 주석처리
+2. CriteriaQuery는 controller에서 service2으로 시작하는 method 주석 해제 및 service, service3으로 method 주석처리
+3. 다시 QueryDsl을 사용하고 싶은 경우 service3으로 시작하는 method 주석 해제 및 service, service2으로 method 주석처리
