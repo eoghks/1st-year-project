@@ -17,3 +17,10 @@ JPA를 이용한 게시판 프로젝트(JPA의 Query Method를 이용)
 
 # 접속 URL
 localhost:{port}/board_JPA
+
+# 주의 사항
+* lombok으로 getter, setter등의 메소드가 만들어지지 않는다면 아래와 같이 해주세요.
+ 1. Project and External Dependendcies 펼치기
+ 2. lombok-1.18.24.jar 우클릭 -> Run as -> Java Application
+ 3. 설치 진행
+ 4. eclipse 재실행
