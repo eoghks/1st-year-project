@@ -24,3 +24,6 @@ localhost:{port}/board_JPA
  2. lombok-1.18.24.jar 우클릭 -> Run as -> Java Application
  3. 설치 진행
  4. eclipse 재실행
+
+# 에러 혹은 질문
+url에 댓글로 남겨주시면 답변해드립니다.
