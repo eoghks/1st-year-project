@@ -47,7 +47,7 @@ public class CloudController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String manage(Model model, @RequestParam(value="lang", required=false, defaultValue="")String lang, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		logger.info("manage");
-		if(lang=="") {
+		if(lang.equals("")) {
 			lang="ko_KR";
 			Locale locale = new Locale(lang);
 			localeResolver.setLocale(request, response, locale);

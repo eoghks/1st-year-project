@@ -38,7 +38,7 @@ dependencies {
 	testImplementation 'junit:junit:4.12'
 
 	testImplementation fileTree(dir: 'WebContent/WEB-INF/lib', include: ['*.jar'])
-	implementation fileTree(dir: 'lib', include: ['*.jar'])
+	//implementation fileTree(dir: 'lib', include: ['*.jar'])
 	implementation 'ch.qos.logback:logback-classic:1.2.2'
 	providedCompile "javax.servlet:servlet-api:2.5"
 	implementation "org.springframework:spring-webmvc:4.3.2.RELEASE"

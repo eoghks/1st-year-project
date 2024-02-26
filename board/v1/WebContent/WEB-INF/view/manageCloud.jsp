@@ -39,12 +39,19 @@
 				<option value="access_key_id"><spring:message code="message.cloud.accessKeyId" /></option>
 				<option value="region"><spring:message code="message.cloud.region" /></option>
 				<option value="namespaces"><spring:message code="message.cloud.namespaces" /></option>
-			</select> <input type="text" id="name1" class="i1"></input>
+			</select> 
+			<input type="text" id="name1" class="i1"></input>
 			<select id="name2" class="s1 hidden">
 				<option value="1" selected><spring:message
 						code="message.cloud.yes" /></option>
 				<option value="0"><spring:message code="message.cloud.no" /></option>
-			</select> <input type="number" id="name3" class="i1 hidden"></input>
+			</select> 
+			<input type="number" id="name3" class="i1 hidden"></input>
+			<select id="name4" class="s1 hidden">
+				<option value="0" selected><spring:message
+						code="message.cloud.seoul" /></option>
+				<option value="1"><spring:message code="message.cloud.usa" /></option>
+			</select> 
 			<button id="search">
 				<i class="fas fa-solid fa-magnifying-glass"></i>
 			</button>
@@ -100,18 +107,27 @@
 			var name1=$("#name1");
 			var name2=$("#name2");
 			var name3=$("#name3");
+			var name4=$("#name4");
 			if(type==="scan_type"){
 				name1.hide();
 				name2.show();
 				name3.hide();
+				name4.hide();
 			}else if(type==="namespaces"){
 				name1.hide();
 				name2.hide();
 				name3.show();
+				name4.hide();
+			}else if(type==="region"){
+				name1.hide();
+				name2.hide();
+				name3.hide();
+				name4.show();
 			}else{
 				name1.show();
 				name2.hide();
 				name3.hide();
+				name4.hide();
 			}
 			
 		})
@@ -156,6 +172,8 @@
 				name = $("#name2").val();
 			}else if(type==="namespaces"){
 				name = $("#name3").val();
+			}else if(type==="region"){
+				name = $("#name4").val();
 			}else{
 				name = $("#name1").val();
 			}

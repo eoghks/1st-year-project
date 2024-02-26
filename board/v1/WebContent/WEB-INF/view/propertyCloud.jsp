@@ -16,7 +16,7 @@
 
 	<div class="parent">
 		<div class="child">
-			<label>Sycros Agent<br>&nbsp;&nbsp;<spring:message code="message.cloud.installed" /></label>
+			<label>Agent<br><spring:message code="message.cloud.installed" /></label>
 		</div>
 		<div class="child">
 			<input class="i2" type="checkbox" id="scan_type" />

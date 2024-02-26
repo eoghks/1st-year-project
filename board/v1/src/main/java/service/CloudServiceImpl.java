@@ -29,6 +29,14 @@ public class CloudServiceImpl implements CloudService {
 	@Override
 	public List<CloudVO> searchCloud(SearchDTO searchDTO) throws Exception {
 		SqlSession SqlSession = SqlSessionFactory.openSession();
+		if(searchDTO.getType()!= null && searchDTO.getType().equals("region")) {
+			if(searchDTO.getName()!= null && searchDTO.getName().equals("0")) {
+				searchDTO.setName("seoul");
+			} else if(searchDTO.getName()!= null && searchDTO.getName().equals("1")) {
+				searchDTO.setName("usa");
+			}
+		}
+			
 		List<CloudVO> result = new ArrayList<CloudVO>();
 		try {
 			result = dao.selectCloudList(SqlSession, searchDTO);
