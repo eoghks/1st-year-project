@@ -8,9 +8,12 @@ JPA를 이용한 게시판 프로젝트(JPA의 Query Method를 이용)
 * Java 8이상
 * Apache 8.5
 * PostgreSQL 10
-* Serever path: /
+* Serever path: /board_JPA
 
 # 기능
  - 호스트 검색(호스트 이름, Agent 설치 여부, 계정키, 암호키, 지역, 네임스페이스 수)
  - 호스트 삭제
  - 다국어
+
+# 접속 URL
+localhost:{port}/board_JPA
