@@ -19,3 +19,6 @@ Mybatis를 이용한 게시판 프로젝트
 
 # 접속 URL
 localhost:{port}/
+
+# 에러 혹은 질문은 아래 페이지 댓글로 부탁드립니다.
+url
