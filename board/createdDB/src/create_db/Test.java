@@ -1,6 +1,5 @@
 package create_db;
 
-//postgres 7316
 public class Test {
 
 	public static void main(String[] args) {
