@@ -40,3 +40,6 @@ localhost:{port}/test
 1. Query Method controller에서 service으로 시작하는 method 주석 해제 및 service2, service3으로 method 주석처리
 2. CriteriaQuery는 controller에서 service2으로 시작하는 method 주석 해제 및 service, service3으로 method 주석처리
 3. 다시 QueryDsl을 사용하고 싶은 경우 service3으로 시작하는 method 주석 해제 및 service, service2으로 method 주석처리
+
+# 에러 혹은 질문
+아래 url에 댓글로 남겨주세요.
