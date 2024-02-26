@@ -27,3 +27,6 @@ JAVA8 이상
      - 방 최대 인원수 조회: #room
      - 방 최대 인원수 변경: #chMax n (n은 현재 채팅방 접속 유저 수 ~ 10명)
      - 강퇴: #out ID
+
+# 에러 혹은 질문
+https://www.notion.so/e71a2e709e31420e88effd16ee871cac?v=f64fd03f07a14ccf9924bb05a2324295&p=3c8ec275a52e4341b8c9ca53e9d8ca18&pm=c에 댓글로 남겨주세요.
