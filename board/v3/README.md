@@ -1,5 +1,8 @@
 # 개요
-JPA를 이용한 게시판 프로젝트(JPA의 QueryDsl를 이용)
+* JPA를 이용한 게시판 프로젝트(default: JPA의 QueryDsl를 이용)
+* service pakage의 CloudService는 JPA의 Query Method를 이용(주석 처리되어 있음)
+* service pakage의 CloudService2는 JPA의 CriteriaQuery를 이용(주석 처리되어 있음)
+* service pakage의 CloudService3는 JPA의 QueryDsl을 이용
 
 # 환경
 * createdDB 프로젝트를 이용하여 데이터베이스 사용자, 테이블 생성(default => db: board, user: board, password: board)
@@ -8,15 +11,17 @@ JPA를 이용한 게시판 프로젝트(JPA의 QueryDsl를 이용)
 * Java 8이상
 * Apache 8.5
 * PostgreSQL 10
-* Serever path: /board_JPA2
+* Serever path: /test
 
 # 기능
  - 호스트 검색(호스트 이름, Agent 설치 여부, 계정키, 암호키, 지역, 네임스페이스 수)
  - 호스트 삭제
+ - 호스트 추가 및 수정
+ - 호스트 추가 및 수정 유효성 체크
  - 다국어
 
 # 접속 URL
-localhost:{port}/board_JPA2
+localhost:{port}/test
 
 # 주의 사항
 * lombok으로 getter, setter등의 메소드가 만들어지지 않는다면 아래와 같이 해주세요.
