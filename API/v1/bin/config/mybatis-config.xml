@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="Url" type="model.Url"/>
+		<typeAlias alias="Header" type="model.Header"/>
+		<typeAlias alias="Body" type="model.Body"/>
+		<typeAlias alias="Mapping" type="model.Mapping"/>
+		<typeAlias alias="Save" type="model.Save"/>
+	</typeAliases>
+
+ 	<environments default="development">
+ 		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="org.postgresql.Driver"></property>
+				<property name="url" value="jdbc:postgresql://211.241.150.169:5432/api"></property>
+				<property name="username" value="api"></property>
+				<property name="password" value="api"></property>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="mapper/facade.xml"/>
+	</mappers>
+
+</configuration>
