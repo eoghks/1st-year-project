@@ -20,6 +20,9 @@
 * extension : 0 = xml, 1 = json
 * method: 0 = GET, 1 = POST
 
+# Test Url
+* http://infuser.odcloud.kr/oas/docs
+
 # 에러 혹은 질문은 아래 페이지 댓글로 부탁드립니다.
 https://www.notion.so/e71a2e709e31420e88effd16ee871cac?v=f64fd03f07a14ccf9924bb05a2324295&p=c681fb16ec4e44459598657fe1ba5aaf&pm=c
 
