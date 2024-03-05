@@ -33,3 +33,6 @@ create table mapping(
   type Integer
 );
 alter table mapping add constraint mapping_pk primary key(urlid, colName);
+
+insert into url values(1, 'http://infuser.odcloud.kr/oas/docs', 0 ,1);
+insert into body values(1, 'namespace', '15068863/v1', 0);
