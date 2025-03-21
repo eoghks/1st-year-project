@@ -16,7 +16,7 @@
 * REST API로 제한(GET/POST)
 * 확장자는 XML/JSON으로 제한
 * GET Method를 사용할 경우 body 정보 필요
-* Post Metho를 사용할 경우 header과 body 정보 필요
+* Post Method를 사용할 경우 header과 body 정보 필요
 * extension : 0 = xml, 1 = json
 * method: 0 = GET, 1 = POST
 
